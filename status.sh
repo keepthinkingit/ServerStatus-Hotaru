@@ -236,9 +236,9 @@ Read_config_client(){
 }
 Read_config_server(){
 	if [[ ! -e "${server_conf_1}" ]]; then
-		server_port_s="35601"
+		server_port_s="35602"
 		Write_server_config_conf
-		server_port="35601"
+		server_port="35602"
 	else
 		server_port="$(cat "${server_conf_1}"|grep "PORT = "|awk '{print $3}')"
 	fi
@@ -286,8 +286,8 @@ Set_server_port(){
 	while true
 		do
 		echo -e "请输入 ServerStatus 服务端监听的端口[1-65535]（用于服务端接收客户端消息的端口，客户端要填写这个端口）"
-		read -e -p "(默认: 35601):" server_port_s
-		[[ -z "$server_port_s" ]] && server_port_s="35601"
+		read -e -p "(默认: 35602):" server_port_s
+		[[ -z "$server_port_s" ]] && server_port_s="35602"
 		echo $((${server_port_s}+0)) &>/dev/null
 		if [[ $? -eq 0 ]]; then
 			if [[ ${server_port_s} -ge 1 ]] && [[ ${server_port_s} -le 65535 ]]; then

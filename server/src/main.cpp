@@ -39,7 +39,7 @@ CConfig::CConfig()
 	str_copy(m_aTemplateFile, "template.html", sizeof(m_aTemplateFile));
 	str_copy(m_aJSONFile, "json/stats.json", sizeof(m_aJSONFile));
 	str_copy(m_aBindAddr, "", sizeof(m_aBindAddr)); // -b, --bind
-	m_Port = 35601; // -p, --port
+	m_Port = 35602; // -p, --port
 }
 
 CMain::CMain(CConfig Config) : m_Config(Config)

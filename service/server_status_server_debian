@@ -31,7 +31,7 @@ Read_config(){
 	if [[ -e "${CONF1}" ]]; then
 		port="$(cat "${CONF1}"|grep "PORT = "|awk '{print $3}')"
 	else
-		port="35601"
+		port="35602"
 	fi
 }
 do_start(){
