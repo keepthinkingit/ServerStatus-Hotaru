@@ -6,8 +6,8 @@
 
 SERVER = "127.0.0.1"
 PORT = 35602
-USER = "USER"
-PASSWORD = "USER_PASSWORD"
+USER = "none"
+PASSWORD = "passwords"
 INTERVAL = 1 #更新间隔
 
 
